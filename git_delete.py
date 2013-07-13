@@ -13,8 +13,9 @@ if __name__ == '__main__':
 
     username = sys.argv[1]
     password = sys.argv[2]
+    server = sys.argv[3]
 
-    jira = JIRA(basic_auth=(username, password),options={'server':'https://eversnap.atlassian.net'})
+    jira = JIRA(basic_auth=(username, password),options={'server':server})
 
     for issue in jira.search_issues('assignee=%s&status=closed' % username):
 
