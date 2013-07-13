@@ -1,0 +1,1 @@
+python /usr/bin/git_delete.py $1 $2

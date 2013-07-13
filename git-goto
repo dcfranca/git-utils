@@ -1,0 +1,5 @@
+git branch | grep $1 > /tmp/git-goto.log
+read -r line < /tmp/git-goto.log
+branch=${line//\*/}
+echo $branch
+git checkout $branch
